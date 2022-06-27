@@ -10,6 +10,6 @@ before_install:
   - docker build -t lux00leo/docker_react_app -f Dockerfile.dev ./
 
 script:
-  - docker run -e CI=true lux00leo/docker_react_app npm run test -- --coverage
+  - docker run -e CI=true lux00leo/docker_react_app npm run test
 
 after_success: -echo "Test success"
